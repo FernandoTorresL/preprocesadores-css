@@ -10,7 +10,10 @@ html
 	body
 		header
 			h1 PlatziGames
-			a.boton Registro
+			if usuario
+				a Hola #{usuario}
+			else
+				a.boton Registro
 		section.intro
 			.intro__imagen: img(src="images/imagen.png")
 			.intro_contenido
