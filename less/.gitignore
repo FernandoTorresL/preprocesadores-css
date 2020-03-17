@@ -4,7 +4,7 @@
 # Edit at https://www.gitignore.io/?templates=less
 
 ### Less ###
-*.less
+#*.less
 
 # End of https://www.gitignore.io/api/less
 
