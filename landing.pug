@@ -1,19 +1,12 @@
 -var titulo = "Título Principal"
 -var subtitulo = "Subtítulo secundario"
 -var titulos = ["Título Principal", "Subtítulo 1", "Subtítulo 2", "Subtítulo 3"]
-mixin caja
+mixin caja(imagen,titulo,contenido)
 	.caja
-		.caja__imagen: img(src="images/imagen.png")
+		.caja__imagen: img(src="images/"+imagen)
 		.caja__contenido
-			h3 #{titulos[1]}
-			p
-				| Lorem ipsum dolor sit amet,
-				| consectetur adipiscing elit. Proin
-				| ex mi, gravida sit amet imperdiet
-				| vel, sodales a mi. Proin sit amet
-				| tellus nec nisl bibendum ornare nec
-				| at augue.Integer semper feugiat
-				| varius.
+			h3=titulo
+			p=contenido
 
 doctype html
 html
@@ -35,16 +28,16 @@ html
 				h5 #{titulos[2]}
 				h5 #{titulos[0][3]}
 				p
-					| Lorem ipsum dolor sit amet, 
-					| consectetur adipiscing elit. Proin 
-					| ex mi, gravida sit amet imperdiet 
-					| vel, sodales a mi. Proin sit amet 
-					| tellus nec nisl bibendum ornare nec 
-					| at augue.Integer semper feugiat 
+					| Lorem ipsum dolor sit amet,
+					| consectetur adipiscing elit. Proin
+					| ex mi, gravida sit amet imperdiet
+					| vel, sodales a mi. Proin sit amet
+					| tellus nec nisl bibendum ornare nec
+					| at augue.Integer semper feugiat
 					| varius.
 					span
 				a.boton Leer más
 		main.contenido
-			+caja
-			+caja
-			+caja
+			+caja('imagen.png',titulos[1],'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex mi, gravida sit amet imperdiet vel, sodales a mi. Proin sit amet tellus nec nisl bibendum ornare nec at augue.Integer semper feugiat varius.')
+			+caja('imagen.png',titulos[2],'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex mi, gravida sit amet imperdiet vel, sodales a mi. Proin sit amet tellus nec nisl bibendum ornare nec at augue.Integer semper feugiat varius.')
+			+caja('imagen.png',titulos[3],'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex mi, gravida sit amet imperdiet vel, sodales a mi. Proin sit amet tellus nec nisl bibendum ornare nec at augue.Integer semper feugiat varius.')
