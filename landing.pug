@@ -31,7 +31,16 @@ html
 					| varius.
 					span
 				a.boton Leer más
-
-		ul
-			each titulo in titulos
-				li=titulo
+		main.contenido
+			.caja
+				.caja__imagen: img(src="images/imagen.png")
+				.caja__contenido
+					h3 #{titulos[1]}
+					p
+						| Lorem ipsum dolor sit amet, 
+						| consectetur adipiscing elit. Proin 
+						| ex mi, gravida sit amet imperdiet 
+						| vel, sodales a mi. Proin sit amet 
+						| tellus nec nisl bibendum ornare nec 
+						| at augue.Integer semper feugiat 
+						| varius.
